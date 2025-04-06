@@ -8,6 +8,7 @@ RUN apk update && apk add curl unzip && \
     unzip /tmp/openai.zip -d /tmp && \
     cd /tmp/non-nodes-openai-main && \
     npm install && \
+    mkdir -p /data/packages/n8n-nodes-openai && \
     cp -R . /data/packages/n8n-nodes-openai
 
 USER node
